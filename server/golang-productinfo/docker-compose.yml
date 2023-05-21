@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  grpc-server:
+    build: .
+    container_name: go-latihan-grpc
+    ports:
+      - 5001:5001
+    networks:
+      - nekomata-network
+
+networks:
+  nekomata-network:
+    driver: bridge
